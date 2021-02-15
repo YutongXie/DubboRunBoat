@@ -17,4 +17,8 @@
     <dubbo:reference id="infoQueryService"
                      interface="com.qiushui.service.InfoService"
                      url="dubbo://127.0.0.1:20880/com.qiushui.service.InfoService" />
+
+    <dubbo:reference id="productPriceQueryService"
+                     interface="com.qiushui.service.PriceService"
+                     url="dubbo://127.0.0.1:20880/com.qiushui.service.PriceService" />
 </beans>
