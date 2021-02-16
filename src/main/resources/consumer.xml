@@ -8,17 +8,20 @@
        http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
 <dubbo:application name="DubboRunBoat" owner="qiushui" />
-<!--    <dubbo:registry address="zookeeper://127.0.0.1/2181" protocol="zookeeper" />-->
-    <dubbo:registry address="N/A" />
+    <dubbo:registry address="zookeeper://127.0.0.1:2181" protocol="zookeeper" check="false" />
+<!--    <dubbo:registry address="N/A" />-->
+
 <!--    <dubbo:reference id="infoQueryService"-->
 <!--                     interface="com.qiushui.service.InfoService"-->
-<!--                     url="dubbo://192.168.31.101:20880/com.qiushui.service.InfoService" />-->
+<!--                     url="dubbo://127.0.0.1:20880/com.qiushui.service.InfoService" />-->
+
+<!--    <dubbo:reference id="productPriceQueryService"-->
+<!--                     interface="com.qiushui.service.PriceService"-->
+<!--                     url="dubbo://127.0.0.1:20880/com.qiushui.service.PriceService" />-->
 
     <dubbo:reference id="infoQueryService"
-                     interface="com.qiushui.service.InfoService"
-                     url="dubbo://127.0.0.1:20880/com.qiushui.service.InfoService" />
+                     interface="com.qiushui.service.InfoService" />
 
     <dubbo:reference id="productPriceQueryService"
-                     interface="com.qiushui.service.PriceService"
-                     url="dubbo://127.0.0.1:20880/com.qiushui.service.PriceService" />
+                     interface="com.qiushui.service.PriceService" />
 </beans>
